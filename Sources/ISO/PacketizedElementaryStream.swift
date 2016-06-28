@@ -181,7 +181,7 @@ struct PacketizedElementaryStream: PESPacketHeader {
             presentationTimeStamp: sampleBuffer.presentationTimeStamp,
             decodeTimeStamp: sampleBuffer.decodeTimeStamp
         )
-        packetLength = UInt16(data.count + optionalPESHeader!.bytes.count)
+        packetLength = 0
     }
 
     func arrayOfPackets(PID:UInt16, PCR:UInt64?) -> [TSPacket] {
